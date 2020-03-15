@@ -1,0 +1,67 @@
+{
+  "connection": "default",
+  "collectionName": "recognitions",
+  "info": {
+    "name": "recognition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "annual_year": {
+      "type": "integer"
+    },
+    "award_title": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "place": {
+      "type": "string"
+    },
+    "image_1": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "image_2": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "image_3": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "approval_status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Rejected"
+      ]
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "department": {
+      "model": "department"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
