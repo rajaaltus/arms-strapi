@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "pc_diagnostic_services",
+  "info": {
+    "name": "pc_diagnostic_service"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "annual_year": {
+      "type": "integer"
+    },
+    "lab_type": {
+      "type": "enumeration",
+      "enum": [
+        "Routine_Test",
+        "Special_Test"
+      ]
+    },
+    "test_name": {
+      "type": "string"
+    },
+    "samples_analyzed": {
+      "type": "integer"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "department": {
+      "model": "department"
+    }
+  }
+}

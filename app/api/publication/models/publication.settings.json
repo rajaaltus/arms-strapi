@@ -1,0 +1,105 @@
+{
+  "connection": "default",
+  "collectionName": "publications",
+  "info": {
+    "name": "publication"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "annual_year": {
+      "type": "integer"
+    },
+    "publication_type": {
+      "type": "enumeration",
+      "enum": [
+        "Journal_Article",
+        "Articles_for_Professionals_in_Souvenirs_Newsletters_etc",
+        "Book",
+        "Book_Chapter",
+        "Monograph",
+        "Manual",
+        "Report",
+        "Article_for_General_public_or_IEC_Materials"
+      ]
+    },
+    "classification": {
+      "type": "enumeration",
+      "enum": [
+        "International",
+        "National",
+        "NotApplicable",
+        "Others"
+      ]
+    },
+    "pmid": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "text"
+    },
+    "article_title": {
+      "type": "text"
+    },
+    "journal_title": {
+      "type": "string"
+    },
+    "publication_date": {
+      "type": "string"
+    },
+    "volume_no": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "string"
+    },
+    "book_title": {
+      "type": "string"
+    },
+    "edition": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "chapter_title": {
+      "type": "string"
+    },
+    "editor_names": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "text",
+      "required": true
+    },
+    "approval_status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Rejected"
+      ]
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "department": {
+      "model": "department"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
