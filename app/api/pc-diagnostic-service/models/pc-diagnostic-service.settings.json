@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "pc_diagnostic_services",
   "info": {
@@ -19,9 +20,6 @@
         "Special_Test"
       ]
     },
-    "test_name": {
-      "type": "string"
-    },
     "samples_analyzed": {
       "type": "integer"
     },
@@ -30,6 +28,9 @@
     },
     "department": {
       "model": "department"
+    },
+    "pc_diagnostic_test": {
+      "model": "pc-diagnostic-test"
     }
   }
 }
