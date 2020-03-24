@@ -1,4 +1,7 @@
 {
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "education_infos",
   "info": {
     "name": "education_info"
   },
@@ -21,8 +24,10 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
-  },
-  "connection": "default",
-  "collectionName": "education_infos"
+  }
 }

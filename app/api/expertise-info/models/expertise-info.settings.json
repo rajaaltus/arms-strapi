@@ -1,4 +1,7 @@
 {
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "expertise_infos",
   "info": {
     "name": "expertise_info"
   },
@@ -18,8 +21,10 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
-  },
-  "connection": "default",
-  "collectionName": "expertise_infos"
+  }
 }

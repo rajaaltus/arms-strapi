@@ -1,4 +1,7 @@
 {
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "experience_infos",
   "info": {
     "name": "experience_info"
   },
@@ -27,8 +30,10 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
-  },
-  "connection": "default",
-  "collectionName": "experience_infos"
+  }
 }

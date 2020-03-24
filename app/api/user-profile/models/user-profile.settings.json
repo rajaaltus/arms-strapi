@@ -1,4 +1,7 @@
 {
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "user_profiles",
   "info": {
     "name": "user_profile"
   },
@@ -55,13 +58,9 @@
     "active_status": {
       "type": "boolean"
     },
-    "profile_picture": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
-  },
-  "connection": "default",
-  "collectionName": "user_profiles"
+  }
 }
